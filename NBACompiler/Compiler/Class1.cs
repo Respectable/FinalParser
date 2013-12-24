@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NBACompiler
+namespace Compiler
 {
-    public class Compiler
+    public class Class1
     {
     }
 }

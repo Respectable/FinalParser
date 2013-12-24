@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47B76091-CFB2-45F0-B363-A103DCA1668B}</ProjectGuid>
+    <ProjectGuid>{F160125C-9209-422F-B922-C43F7D9546E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BBRTokenizer</RootNamespace>
@@ -43,20 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BBRLexer.g4.cs">
+    <Compile Include="BBRHTMLLexer.g4.cs">
       <DependentUpon>BBRHTMLLexer.g4</DependentUpon>
     </Compile>
-    <Compile Include="Tokenizer.cs" />
+    <Compile Include="BBRLexer.g4.cs">
+      <DependentUpon>BBRLexer.g4</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Antlr4 Include="BBRHTMLLexer.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>BBRParser</CustomToolNamespace>
+      <CustomToolNamespace>BBRTokenizer</CustomToolNamespace>
     </Antlr4>
     <Antlr4 Include="BBRLexer.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>BBRParser</CustomToolNamespace>
+      <CustomToolNamespace>BBRTokenizer</CustomToolNamespace>
     </Antlr4>
     <None Include="packages.config" />
   </ItemGroup>

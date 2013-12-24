@@ -11,5 +11,3 @@ END_PBP     :   '</table>' -> skip, popMode;
 TAG_ALT     :   '<' .*? '>' -> skip ;
 TEXT        :   ~[<]+ ;
 
-
-
